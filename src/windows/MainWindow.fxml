@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="918.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TabPane prefHeight="634.0" prefWidth="918.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <tabs>
+        <Tab text="Files">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ComboBox fx:id="organismListBx" layoutX="14.0" layoutY="45.0" prefHeight="21.0" prefWidth="164.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="14.0" layoutY="18.0" text="Loaded Organism Dataset:" />
+                <ComboBox fx:id="weatherListBx" layoutX="242.0" layoutY="45.0" prefHeight="21.0" prefWidth="164.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="242.0" layoutY="18.0" text="Loaded Weather Dataset:" />
+                <Label layoutX="14.0" layoutY="121.0" text="Stages:" />
+                <TextField fx:id="stagesTxt" editable="false" layoutX="76.0" layoutY="118.0" prefWidth="56.0" />
+                <Label layoutX="14.0" layoutY="156.0" text="Members:" />
+                <TextField fx:id="membersTxt" editable="false" layoutX="76.0" layoutY="153.0" prefWidth="56.0" />
+                <ListView fx:id="organismList" layoutX="16.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" />
+                <Label layoutX="242.0" layoutY="121.0" text="Stage Names:" />
+                <ListView id="graphOrgList" fx:id="stageNameList" editable="true" layoutX="242.0" layoutY="140.0" prefHeight="246.0" prefWidth="192.0" />
+                <Button fx:id="newOrgBtn" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#newOrganism" text="New" />
+                <Button fx:id="loadOrgBtn" layoutX="73.0" layoutY="82.0" mnemonicParsing="false" onAction="#loadOrganism" text="Load" />
+                <Button fx:id="newWeatherBtn" layoutX="242.0" layoutY="82.0" mnemonicParsing="false" onAction="#newWeather" text="New" />
+                <Button fx:id="loadWeatherBtn" layoutX="301.0" layoutY="82.0" mnemonicParsing="false" onAction="#loadWeather" text="Load" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab onSelectionChanged="#updateModelWindow" text="Model">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="576.0" prefWidth="918.0">
+              <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Model:" />
+                <ComboBox id="organismListBx" fx:id="modelListBx" layoutX="10.0" layoutY="42.0" prefHeight="21.0" prefWidth="230.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="10.0" layoutY="120.0" text="Weather Dataset:" />
+                <Label layoutX="10.0" layoutY="178.0" text="Organism Dataset:" />
+                <TextField fx:id="modelWeatherTxt" editable="false" layoutX="10.0" layoutY="145.0" prefWidth="199.0" />
+                <TextField fx:id="modelOrganismTxt" editable="false" layoutX="10.0" layoutY="204.0" prefWidth="199.0" text="" />
+                <Label layoutX="262.0" layoutY="233.0" text="Model Parameters:" />
+                <Label layoutX="10.0" layoutY="233.0" text="Organisms Used:" />
+                <ListView fx:id="modelOrganismList" layoutX="9.0" layoutY="263.0" prefHeight="249.0" prefWidth="200.0" />
+                <Button fx:id="statsCalcBtn" layoutX="773.0" layoutY="547.0" mnemonicParsing="false" onAction="#stats" text="Calculate Statistics" />
+                <Label layoutX="751.0" layoutY="13.0" text="Iterations:" />
+                <TextField fx:id="iterTxt" layoutX="816.0" layoutY="13.0" prefWidth="94.0" text="1000" />
+                <TextField fx:id="alphaTxt" layoutX="816.0" layoutY="43.0" prefWidth="94.0" text="0.05" />
+                <Label layoutX="769.0" layoutY="46.0" text="Alpha:" />
+                <Label layoutX="741.0" layoutY="102.0" prefWidth="27.0" text="G^2:" />
+                <TextField fx:id="ggTxt" editable="false" layoutX="783.0" layoutY="99.0" prefWidth="94.0" />
+                <TextField fx:id="ggpTxt" editable="false" layoutX="783.0" layoutY="143.0" prefWidth="94.0" />
+                <Label layoutX="732.0" layoutY="146.0" text="G^2 P:" />
+                <TableView id="paramTbl" fx:id="statsParamTbl" editable="true" layoutX="552.0" layoutY="226.0" prefHeight="304.0" prefWidth="339.0">
+                  <columns>
+                    <TableColumn editable="true" maxWidth="5000.0" minWidth="10.0" prefWidth="116.0" sortable="false" text="Param Low" fx:id="paramLowCol" />
+                    <TableColumn editable="true" maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" sortable="false" text="Param" fx:id="paramCol" />
+                    <TableColumn editable="true" maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" sortable="false" text="Param High" fx:id="paramHighCol" />
+                  </columns>
+                </TableView>
+                <Label layoutX="748.0" layoutY="172.0" text="P-value Confidence Interval:" />
+                <TextField id="ggpTxt" fx:id="ggciLowTxt" editable="false" layoutX="747.0" layoutY="192.0" prefWidth="69.0" text="" />
+                <TextField id="ggpTxt" fx:id="ggciHighTxt" editable="false" layoutX="835.0" layoutY="192.0" prefWidth="69.0" />
+                <Label layoutX="262.0" layoutY="178.0" text="Log Likelihood:" />
+                <TextField fx:id="logTxt" editable="false" layoutX="264.0" layoutY="204.0" prefWidth="200.0" />
+                <Separator layoutX="525.0" orientation="VERTICAL" prefHeight="603.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <Label layoutX="552.0" layoutY="15.0" text="Weather:" />
+                <Label layoutX="540.0" layoutY="43.0" text="Organisms:" />
+                <Label layoutX="563.0" layoutY="71.0" text="Model:" />
+                <ComboBox fx:id="statsOrganismCombBx" layoutX="612.0" layoutY="40.0" prefHeight="21.0" prefWidth="132.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox fx:id="statsWeatherCombBox" layoutX="612.0" layoutY="12.0" prefHeight="21.0" prefWidth="132.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ListView fx:id="modelParamList" layoutX="262.0" layoutY="263.0" prefHeight="249.0" prefWidth="200.0" />
+                <ComboBox id="statsOrganismCombBx" fx:id="statsModelCombBx" layoutX="612.0" layoutY="69.0" prefHeight="21.0" prefWidth="132.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button fx:id="newModelBtn" layoutX="262.0" layoutY="42.0" mnemonicParsing="false" onAction="#newModel" text="New" />
+                <TextField id="chiTxt" fx:id="xxTxt" editable="false" layoutX="576.0" layoutY="99.0" prefWidth="98.0" />
+                <Label layoutX="545.0" layoutY="102.0" text="X^2:" />
+                <Label layoutX="535.0" layoutY="146.0" text="X^2 P:" />
+                <TextField id="pvalTxt" fx:id="xxpTxt" editable="false" layoutX="576.0" layoutY="143.0" prefWidth="98.0" />
+                <Label layoutX="544.0" layoutY="172.0" text="P-value Confidence Interval:" />
+                <TextField id="ggpTxt" fx:id="xxLowTxt" editable="false" layoutX="541.0" layoutY="191.0" prefWidth="69.0" text="" />
+                <TextField id="ggpTxt" fx:id="xxHighTxt" editable="false" layoutX="629.0" layoutY="191.0" prefWidth="69.0" />
+                <Label layoutY="120.0" text="AIC:" AnchorPane.leftAnchor="262.0" />
+                <TextField fx:id="aicTxt" editable="false" layoutX="264.0" layoutY="145.0" prefWidth="200.0" />
+                <Label layoutX="10.0" layoutY="69.0" text="Method:" />
+                <TextField id="modelWeatherTxt" fx:id="modelMethodTxt" editable="false" layoutX="10.0" layoutY="90.0" prefWidth="118.0" />
+                <Label layoutX="759.0" layoutY="72.0" text="Method:" />
+                <TextField id="modelWeatherTxt" fx:id="statsMethodTxt" editable="false" layoutX="816.0" layoutY="72.0" prefWidth="94.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab onSelectionChanged="#updateGraphWindow" text="Graph">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="581.0" prefWidth="932.0">
+              <children>
+                <Button fx:id="prevBtn" layoutX="512.0" layoutY="528.0" mnemonicParsing="false" onAction="#prev" text="Prev" />
+                <Button fx:id="graphBtn" layoutX="35.0" layoutY="528.0" mnemonicParsing="false" onAction="#graph" text="Graph" />
+                <Button fx:id="nextBtn" layoutX="566.0" layoutY="528.0" mnemonicParsing="false" onAction="#next" text="Next" />
+                <ImageView fx:id="figureView" fitHeight="491.0" fitWidth="655.0" layoutX="246.67" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                <CheckBox fx:id="log3dCheckBx" layoutX="12.0" layoutY="177.0" mnemonicParsing="false" selected="true" text="3D PDF" />
+                <Label layoutX="12.0" layoutY="200.0" text="S Range:" />
+                <TextField id="log3dLowTxt" fx:id="log3dSLowTxt" layoutX="63.0" layoutY="200.0" prefWidth="45.0" text="0" />
+                <TextField id="log3dHighTxt" fx:id="log3dSHighTxt" layoutX="116.0" layoutY="200.0" prefWidth="45.0" text="800" />
+                <CheckBox fx:id="log2dCheckBx" layoutX="11.0" layoutY="252.0" mnemonicParsing="false" selected="true" text="2D PDF" />
+                <Label layoutX="11.0" layoutY="275.0" text="Samples:" />
+                <TextField id="log2dLowTxt" fx:id="log2dSampleTxt" layoutX="61.0" layoutY="275.0" prefWidth="45.0" text="5" />
+                <CheckBox fx:id="expPropCheckBx" layoutX="7.0" layoutY="328.0" mnemonicParsing="false" selected="true" text="Predicted Proportions " />
+                <Label layoutX="7.0" layoutY="351.0" text="Range:" />
+                <TextField id="expPropLowtxt" fx:id="expPropLowTxt" layoutX="48.0" layoutY="351.0" prefWidth="45.0" text="1" />
+                <TextField fx:id="expPropHighTxt" layoutX="101.0" layoutY="351.0" prefWidth="45.0" text="0" />
+                <CheckBox fx:id="compRawCheckBx" layoutX="5.0" layoutY="379.0" mnemonicParsing="false" selected="true" text="Individual Stages" />
+                <Label layoutX="8.0" layoutY="401.0" text="Range:" />
+                <TextField fx:id="compRawLowTxt" layoutX="48.0" layoutY="401.0" prefWidth="45.0" text="1" />
+                <TextField fx:id="compRawHighTxt" layoutX="101.0" layoutY="401.0" prefWidth="45.0" text="0" />
+                <Label layoutX="16.0" layoutY="301.0" text="Interval:" />
+                <TextField id="log2dLowTxt" fx:id="log2dIntervalTxt" layoutX="61.0" layoutY="301.0" prefWidth="45.0" text="100" />
+                <Label layoutX="113.0" layoutY="275.0" text="Offset:" />
+                <TextField id="log2dLowTxt" fx:id="log2dOffsetTxt" layoutX="151.0" layoutY="275.0" prefWidth="45.0" text="50" />
+                <Label layoutX="12.0" layoutY="226.0" text="T Range:" />
+                <TextField id="log3dLowTxt" fx:id="log3dTLowTxt" layoutX="63.0" layoutY="226.0" prefWidth="45.0" text="50" />
+                <TextField id="log3dHighTxt" fx:id="log3dTHighTxt" layoutX="116.0" layoutY="226.0" prefWidth="45.0" text="600" />
+                <Label layoutX="12.0" layoutY="115.0" text="Image Width:" />
+                <Label layoutX="12.0" layoutY="145.0" text="Image Height:" />
+                <TextField fx:id="imageHeightTxt" layoutX="94.0" layoutY="142.0" prefWidth="89.0" text="700" />
+                <TextField fx:id="imageWidthTxt" layoutX="94.0" layoutY="112.0" prefWidth="89.0" text="850" />
+                <RadioButton fx:id="allGraphsrbtn" layoutX="17.0" layoutY="431.0" mnemonicParsing="false" selected="true" text="All Graphs On One Figure">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="stageGraphToggle" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="oneGraphPerBtn" layoutX="17.0" layoutY="447.0" mnemonicParsing="false" text="One Graph Per Figure" toggleGroup="$stageGraphToggle" />
+                <CheckBox fx:id="combChartCheckBx" layoutX="7.0" layoutY="472.0" mnemonicParsing="false" selected="true" text="Combined Chart" />
+                <Label layoutX="11.0" layoutY="498.0" text="Range:" />
+                <TextField id="expPropLowtxt" fx:id="combChartLowTxt" layoutX="52.0" layoutY="498.0" prefWidth="45.0" text="1" />
+                <TextField id="expPropHighTxt" fx:id="combChartHighTxt" layoutX="106.0" layoutY="498.0" prefWidth="45.0" text="0" />
+                <Label layoutX="23.0" layoutY="23.0" text="Weather:" />
+                <Label layoutX="11.0" layoutY="51.0" text="Organisms:" />
+                <Label layoutX="34.0" layoutY="80.0" text="Model:" />
+                <ComboBox fx:id="organismGraphCombBx" layoutX="77.0" layoutY="51.0" prefHeight="21.0" prefWidth="121.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox fx:id="modelGraphCombBx" layoutX="77.0" layoutY="80.0" prefHeight="21.0" prefWidth="121.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox fx:id="weatherGraphCombBx" layoutX="77.0" layoutY="23.0" prefHeight="21.0" prefWidth="121.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button fx:id="saveBtn" layoutX="832.0" layoutY="528.0" mnemonicParsing="false" onAction="#graphSave" text="Save" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab onSelectionChanged="#updateForecastWindow" text="Forecast">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ImageView id="forecaseView" fx:id="forecastView" fitHeight="491.0" fitWidth="655.0" layoutX="249.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="15.0" layoutY="14.0" text="Weather:" />
+                <Label layoutX="26.0" layoutY="49.0" text="Model:" />
+                <ComboBox id="modelGraphCombBx" fx:id="forecastModelCmbBx" layoutX="69.0" layoutY="49.0" prefHeight="21.0" prefWidth="121.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <ComboBox id="weatherGraphCombBx" fx:id="forecastWeatherCmbBx" layoutX="69.0" layoutY="14.0" prefHeight="21.0" prefWidth="121.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="19.0" layoutY="90.0" text="Image Width:" />
+                <Label layoutX="19.0" layoutY="120.0" text="Image Height:" />
+                <TextField id="imageHeightTxt" fx:id="forecastHeightTxt" layoutX="101.0" layoutY="117.0" prefWidth="89.0" text="700" />
+                <TextField id="imageWidthTxt" fx:id="forecastWidthTxt" layoutX="101.0" layoutY="87.0" prefWidth="89.0" text="850" />
+                <CheckBox id="forecastConfidenceCheckBx" fx:id="forecastTendenciesCheckBx" layoutX="16.0" layoutY="272.0" mnemonicParsing="false" selected="true" text="Stage Measures Of Central Tendency " />
+                <CheckBox id="forecastProportionCheckBx" fx:id="forecastPredictionCheckBx" layoutX="15.0" layoutY="150.0" mnemonicParsing="false" selected="true" text="Stage Prediction" />
+                <Label layoutX="51.0" layoutY="190.0" text="Stage:" />
+                <Label layoutX="25.0" layoutY="219.0" text="\% In Stage:" />
+                <TextField fx:id="forecastStageTxt" layoutX="94.0" layoutY="190.0" prefWidth="59.0" text="1" />
+                <TextField fx:id="forecastPercentTxt" layoutX="94.0" layoutY="217.0" prefWidth="59.0" text="50" />
+                <CheckBox fx:id="forecastFitCheckBx" layoutX="15.0" layoutY="305.0" mnemonicParsing="false" selected="true" text="Goodness-Of-Fit" />
+                <Button layoutX="58.0" layoutY="414.0" mnemonicParsing="false" onAction="#forecast" text="Graph" />
+                <Button id="prevBtn" layoutX="530.0" layoutY="520.0" mnemonicParsing="false" onAction="#forecastPrev" text="Prev" />
+                <Button id="nextBtn" layoutX="584.0" layoutY="520.0" mnemonicParsing="false" onAction="#forecastNext" text="Next" />
+                <CheckBox fx:id="forecastErrorCheckBx" layoutX="51.0" layoutY="169.0" mnemonicParsing="false" text="Show Error Bars" />
+                <Button layoutX="817.0" layoutY="521.0" mnemonicParsing="false" onAction="#forecastSave" text="Save" />
+                <Label layoutX="14.0" layoutY="330.0" text="Range:" />
+                <TextField fx:id="forecastFitLowTxtBx" layoutX="53.0" layoutY="330.0" prefWidth="52.9998779296875" text="1" />
+                <TextField fx:id="forecastFitHighTxtBx" layoutX="111.0" layoutY="330.0" prefWidth="53.0" text="0" />
+                <RadioButton layoutX="37.0" layoutY="359.0" mnemonicParsing="false" text="All Stages On One Figure">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="forecastFigureToggle" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="forecastOneFigureStageBtn" layoutX="37.0" layoutY="379.0" mnemonicParsing="false" selected="true" text="One Figure Per Stage" toggleGroup="$forecastFigureToggle" />
+                <Label layoutX="14.0" layoutY="244.0" text="Range:" />
+                <TextField id="forecastFitLowTxtBx" fx:id="forecastPredictLow" layoutX="53.0" layoutY="244.0" prefWidth="52.9998779296875" text="1" />
+                <TextField id="forecastFitHighTxtBx" fx:id="forecastPredictHigh" layoutX="111.0" layoutY="244.0" prefWidth="53.0" text="0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Settings">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField fx:id="organismImportTxt" layoutX="21.0" layoutY="46.0" prefWidth="505.0" />
+                <Label layoutX="21.0" layoutY="22.0" text="Default place to look for organism files:" />
+                <Button layoutX="552.0" layoutY="47.0" mnemonicParsing="false" onAction="#changeOrganismImport" text="Change" />
+                <TextField fx:id="weatherImportTxt" layoutX="21.0" layoutY="111.0" prefWidth="505.0" />
+                <Label layoutX="21.0" layoutY="87.0" text="Default place to look for weather files:" />
+                <Button layoutX="552.0" layoutY="111.0" mnemonicParsing="false" onAction="#changeWeatherImport" text="Change" />
+                <TextField fx:id="organismSaveTxt" layoutX="21.0" layoutY="174.0" prefWidth="505.0" />
+                <Label layoutX="21.0" layoutY="150.0" text="Default place to save organism datasets:" />
+                <Button layoutX="552.0" layoutY="174.0" mnemonicParsing="false" onAction="#changeOrganismSave" text="Change" />
+                <TextField fx:id="weatherSaveTxt" layoutX="21.0" layoutY="235.0" prefWidth="505.0" />
+                <Label layoutX="21.0" layoutY="211.0" text="Default place to save weather datasets:" />
+                <Button layoutX="552.0" layoutY="235.0" mnemonicParsing="false" onAction="#changeWeatherSave" text="Change" />
+                <TextField fx:id="modelTxt" layoutX="21.0" layoutY="341.0" prefWidth="505.0" />
+                <Label layoutX="21.0" layoutY="317.0" text="Model database:" />
+                <Button layoutX="552.0" layoutY="341.0" mnemonicParsing="false" onAction="#changeModelFile" text="Change" />
+                <Button layoutX="21.0" layoutY="396.0" mnemonicParsing="false" onAction="#resetSettings" text="Reset All" />
+                <Label layoutX="21.0" layoutY="269.0" text="Default place to save figures:" />
+                <TextField id="weatherSaveTxt" fx:id="figureSaveTxt" layoutX="21.0" layoutY="287.0" prefWidth="505.0" />
+                <Button layoutX="552.0" layoutY="287.0" mnemonicParsing="false" onAction="#changeFigureSave" text="Change" />
+                <CheckBox fx:id="tooltipCheckBx" layoutX="23.0" layoutY="372.0" mnemonicParsing="false" onAction="#changeTooltips" text="Tooltips" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Help">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <WebView fx:id="helpWebView" prefHeight="555.0" prefWidth="864.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="14.0" />
+                <Button fx:id="helpBackBtn" mnemonicParsing="false" onAction="#back" text="&lt;&lt;" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="474.0" />
+                <Button fx:id="helpFwdBtn" mnemonicParsing="false" onAction="#forward" text="&gt;&gt;" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="407.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

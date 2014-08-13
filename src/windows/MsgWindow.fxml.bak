@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="447.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <ScrollPane layoutX="35.0" layoutY="16.0" prefHeight="336.0" prefWidth="377.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+      </content>
+    </ScrollPane>
+    <Button layoutX="356.0" layoutY="365.0" mnemonicParsing="false" text="Button" />
+  </children>
+</AnchorPane>

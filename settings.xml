@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<settings>
+    <lastOrganism>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.about.xml</lastOrganism>
+    <lastWeather>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.about.xml</lastWeather>
+    <lastModel>Model-08.13.14.39.33</lastModel>
+    <organismImport>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Raw\Organisms</organismImport>
+    <weatherImport>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Raw\Weather</weatherImport>
+    <organismSave>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms</organismSave>
+    <weatherSave>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather</weatherSave>
+    <modelLocation>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\models.xml</modelLocation>
+    <figureLocation>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Figures</figureLocation>
+    <tempFigureLocation>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Temp\Figures\Graph</tempFigureLocation>
+    <tooltips>true</tooltips>
+    <organismList>
+        <organism>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.about.xml</location>
+            <name>speciesDataJulian</name>
+        </organism>
+    </organismList>
+    <weatherList>
+        <weather>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.about.xml</location>
+            <name>billsWeather</name>
+        </weather>
+    </weatherList>
+</settings>

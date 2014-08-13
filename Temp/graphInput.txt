@@ -1,0 +1,49 @@
+tag	data
+weather	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.weather.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.California.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Carmel.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Sonora.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Butte.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Padre.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Nonpareil.txt
+stage	Stage 0
+stage	Stage 1
+stage	Stage 2
+stage	Stage 3
+stage	Stage 4
+stage	Stage 5
+stage	Stage 6
+saveLoc	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Temp\Figures\Graph
+params	646.186243742644
+params	786.985418821609
+params	847.991088971317
+params	4.51776895868132
+logLike	-339.218441374433
+stageMap	1:1
+stageMap	0:1
+stageMap	2:2
+stageMap	3:3
+stageMap	4:4
+stageMap	5:4
+stageMap	6:4
+log3d	1
+log2d	1
+expProp	1
+compRaw	1
+together	1
+combined	1
+log2dinterval	100
+log2doffset	50
+log2dsample	5
+logPdf3DShigh	800
+logPdf3DSlow	0
+logPdf3DThigh	600
+logPdf3DTlow	50
+expProphigh	0
+expProplow	1
+compRawhigh	0
+compRawlow	1
+combHigh	0
+combLow	1
+width	850
+height	700

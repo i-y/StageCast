@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <Label layoutX="19.0" layoutY="23.0" text="Organism Dataset:" />
+    <Label layoutX="331.0" layoutY="23.0" text="Weather Dataset:" />
+    <ComboBox id="organismBx" fx:id="organismListBx" layoutX="19.0" layoutY="48.0" onAction="#loadOrganism" prefHeight="21.0" prefWidth="242.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox id="weatherBx" fx:id="weatherListBx" layoutX="331.0" layoutY="48.0" onAction="#loadWeather" prefHeight="21.0" prefWidth="242.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="19.0" layoutY="85.0" text="Number of Stages:" />
+    <TextField fx:id="stagesTxt" editable="false" layoutX="19.0" layoutY="107.0" prefWidth="84.0" />
+    <Button fx:id="modelBtn" layoutX="520.0" layoutY="644.0" mnemonicParsing="false" onAction="#model" text="Model" />
+    <Label layoutX="331.0" layoutY="85.0" text="Model Name:" />
+    <TextField fx:id="modelNameTxt" layoutX="331.0" layoutY="110.0" prefWidth="226.0" />
+    <ScrollPane fx:id="organismScroll" layoutX="19.0" layoutY="174.0" prefHeight="242.0" prefWidth="251.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+      </content>
+    </ScrollPane>
+    <ListView id="organismList" fx:id="stagesList" layoutX="331.0" layoutY="174.0" prefHeight="242.0" prefWidth="233.0" />
+    <Label layoutX="19.0" layoutY="145.0" text="Organisms:" />
+    <Label layoutX="333.0" layoutY="145.0" text="Stages:" />
+    <Label layoutX="19.0" layoutY="438.0" text="Optimization Method:" />
+    <RadioButton fx:id="optim1RBtn" layoutX="19.0" layoutY="462.0" mnemonicParsing="false" selected="true" text="Nelder-Mead">
+      <toggleGroup>
+        <ToggleGroup fx:id="optim" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="optim2RBtn" layoutX="19.0" layoutY="478.0" mnemonicParsing="false" text="BFGS" toggleGroup="$optim" />
+    <RadioButton fx:id="optim3RBtn" layoutX="19.0" layoutY="494.0" mnemonicParsing="false" text="CG" toggleGroup="$optim" />
+    <RadioButton fx:id="optim4RBtn" layoutX="19.0" layoutY="510.0" mnemonicParsing="false" text="L-BFGS-B" toggleGroup="$optim" />
+    <RadioButton fx:id="optim5RBtn" layoutX="19.0" layoutY="526.0" mnemonicParsing="false" text="SANN" toggleGroup="$optim" />
+    <CheckBox fx:id="paramChckBx" layoutX="331.0" layoutY="438.0" mnemonicParsing="false" onAction="#toggleParams" text="Choose Initial Parameters" />
+    <ListView fx:id="paramList" disable="false" editable="true" layoutX="331.0" layoutY="470.0" prefHeight="162.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+tag	data
+weather	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.weather.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Sonora.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Butte.txt
+species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataJulian/speciesDataJulian.Nonpareil.txt
+stageMap	1:1
+stageMap	0:1
+stageMap	2:2
+stageMap	3:3
+stageMap	4:4
+stageMap	5:4
+stageMap	6:4
+saveLoc	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Temp
+optim	CG

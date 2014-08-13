@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <Label layoutX="14.0" layoutY="23.0" text="Organism Dataset:" />
+    <Label layoutX="333.0" layoutY="23.0" text="Weather Dataset:" />
+    <ComboBox id="organismBx" fx:id="organismListBx" layoutX="28.0" layoutY="48.0" onAction="#loadOrganism" prefHeight="21.0" prefWidth="242.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox id="weatherBx" fx:id="weatherListBx" layoutX="333.0" layoutY="48.0" onAction="#loadWeather" prefHeight="21.0" prefWidth="242.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ScrollPane fx:id="organismScroll" layoutX="19.0" layoutY="117.0" prefHeight="226.0" prefWidth="242.0">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+      </content>
+    </ScrollPane>
+    <Label layoutX="14.0" layoutY="88.0" text="Stages:" />
+    <TextField fx:id="stagesTxt" editable="false" layoutX="63.0" layoutY="85.0" prefWidth="58.0" />
+    <Button layoutX="509.0" layoutY="318.0" mnemonicParsing="false" onAction="#model" text="Model" />
+    <Label layoutX="338.0" layoutY="85.0" text="Model Name:" />
+    <TextField fx:id="modelNameTxt" layoutX="338.0" layoutY="110.0" prefWidth="226.0" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 7, 2014, 3:18:56 PM
+    Author     : ian.yocum
+*/
+
+.root {
+    /*-fx-background-color:#EFEFEF;*/
+}
+
+.combo-box {
+    /*-fx-background-color:steelblue;*/
+}
+
+.drag-display-cell:even, .drag-display-cell:odd{
+    /*-fx-background-color:gray;*/
+    -fx-background-color:gainsboro;
+    /*-fx-background-color:white;*/
+    
+}
+
+.drag-display-node {
+    -fx-cursor: default;
+    -fx-background-color:steelblue;
+    -fx-alignment:center;
+    -fx-text-alignment:center;
+    -fx-background-insets:3 2 3 2;
+    -fx-font-size:16;
+}
+
+.drag-display-node-empty {
+    /*-fx-background-color:gainsboro;*/
+}
+
+.drag-display-hbox {
+    /*-fx-background-color:gainsboro;*/
+    -fx-alignment:center;
+}
+
+.model-checkbox {
+    -fx-font-size:14;
+}

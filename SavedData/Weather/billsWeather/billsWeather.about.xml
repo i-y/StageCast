@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<about>
+    <name>billsWeather</name>
+    <date>08/13/2014</date>
+    <time>14:39:31</time>
+    <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.about.xml</location>
+    <type>Weather</type>
+    <stages>0</stages>
+    <stageNames/>
+    <size>1</size>
+    <members>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.weather.txt</location>
+            <name>weather</name>
+        </member>
+    </members>
+</about>

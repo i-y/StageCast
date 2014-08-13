@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Files">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ComboBox fx:id="organismListBx" layoutX="14.0" layoutY="45.0" onAction="#loadOrganism" prefHeight="21.0" prefWidth="164.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="14.0" layoutY="18.0" text="Loaded Organism Dataset:" />
+                <ComboBox fx:id="weatherListBx" layoutX="330.0" layoutY="45.0" onAction="#loadWeather" prefHeight="21.0" prefWidth="164.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="330.0" layoutY="18.0" text="Loaded Weather Dataset:" />
+                <Button layoutX="188.0" layoutY="45.0" mnemonicParsing="false" onAction="#importOrganism" text="Import" />
+                <Button layoutX="508.0" layoutY="45.0" mnemonicParsing="false" onAction="#importWeather" text="Import" />
+                <Label layoutX="14.0" layoutY="90.0" text="Stages:" />
+                <TextField fx:id="stagesTxt" editable="false" layoutX="76.0" layoutY="87.0" prefWidth="56.0" />
+                <Label layoutX="14.0" layoutY="125.0" text="Members:" />
+                <TextField fx:id="membersTxt" editable="false" layoutX="76.0" layoutY="122.0" prefWidth="56.0" />
+                <ListView fx:id="organismList" layoutX="16.0" layoutY="155.0" prefHeight="200.0" prefWidth="200.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Model">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Loaded Model:" />
+                <ComboBox id="organismListBx" fx:id="modelListBx" layoutX="14.0" layoutY="39.0" onAction="#loadModel" prefHeight="21.0" prefWidth="230.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label layoutX="309.0" layoutY="11.0" text="Weather Dataset:" />
+                <Label layoutX="19.0" layoutY="70.0" text="Organism Dataset:" />
+                <TextField fx:id="modelWeatherTxt" editable="false" layoutX="309.0" layoutY="33.0" prefWidth="230.0" />
+                <TextField fx:id="modelOrganismTxt" editable="false" layoutX="19.0" layoutY="96.0" prefWidth="221.0" />
+                <Label layoutX="309.0" layoutY="78.0" text="Model Elements:" />
+                <ListView fx:id="modelElementList" layoutX="309.0" layoutY="104.0" prefHeight="224.0" prefWidth="200.0" />
+                <Label layoutX="19.0" layoutY="131.0" text="Organisms Used:" />
+                <ListView fx:id="modelOrganismList" layoutX="22.0" layoutY="161.0" prefHeight="167.0" prefWidth="200.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Graph">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button layoutX="216.0" layoutY="334.0" mnemonicParsing="false" text="Prev" />
+                <Button layoutX="274.0" layoutY="334.0" mnemonicParsing="false" onAction="#graph" text="Graph" />
+                <Button layoutX="346.0" layoutY="334.0" mnemonicParsing="false" text="Next" />
+                <ImageView fx:id="figureView" fitHeight="310.5" fitWidth="414.0" layoutX="93.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Settings">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField fx:id="organismImportTxt" layoutX="21.0" layoutY="46.0" prefWidth="408.0" />
+                <Label layoutX="21.0" layoutY="22.0" text="Default place to look for organism files:" />
+                <Button layoutX="464.0" layoutY="47.0" mnemonicParsing="false" onAction="#changeOrganismImport" text="Change" />
+                <TextField fx:id="weatherImportTxt" layoutX="21.0" layoutY="111.0" prefWidth="408.0" />
+                <Label layoutX="21.0" layoutY="87.0" text="Default place to look for weather files:" />
+                <Button layoutX="464.0" layoutY="112.0" mnemonicParsing="false" onAction="#changeWeatherImport" text="Change" />
+                <TextField fx:id="organismSaveTxt" layoutX="21.0" layoutY="174.0" prefWidth="408.0" />
+                <Label layoutX="21.0" layoutY="150.0" text="Default place to save organism datasets:" />
+                <Button layoutX="464.0" layoutY="175.0" mnemonicParsing="false" onAction="#changeOrganismSave" text="Change" />
+                <TextField fx:id="weatherSaveTxt" layoutX="21.0" layoutY="239.0" prefWidth="408.0" />
+                <Label layoutX="21.0" layoutY="215.0" text="Default place to save weather datasets:" />
+                <Button layoutX="464.0" layoutY="240.0" mnemonicParsing="false" onAction="#changeWeatherSave" text="Change" />
+                <TextField fx:id="modelTxt" layoutX="21.0" layoutY="300.0" prefWidth="408.0" />
+                <Label layoutX="21.0" layoutY="276.0" text="Model database:" />
+                <Button layoutX="464.0" layoutY="301.0" mnemonicParsing="false" onAction="#changeModelFile" text="Change" />
+                <Button layoutX="21.0" layoutY="334.0" mnemonicParsing="false" onAction="#resetSettings" text="Reset All" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Help">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label layoutX="251.0" layoutY="169.0" text="Coming Eventually" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
