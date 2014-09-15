@@ -1122,11 +1122,11 @@ public class MainWindow {
         
     }
     
-    /*private void setupHelpWindow() {
+    private void setupHelpWindow() {
         WebEngine webEngine = helpWebView.getEngine();
-        webEngine.load(this.getClass().getResource("/etc/documentation/html/index.html").toExternalForm());
+        webEngine.load(this.getClass().getResource("/etc/documentation/html/doc.html").toExternalForm());
         history = webEngine.getHistory();
-    }*/
+    }
 	
     /**
      * Initializes the window in preparation for showing it to the user.
@@ -1146,7 +1146,7 @@ public class MainWindow {
             if(settings.tooltips) {
                 setupTooltips();
             }
-            //setupHelpWindow();
+            setupHelpWindow();
             statsParamTbl.setItems(tableParams);
         } catch (IOException e) {
             ErrorManager.log("Error in MainWindow.setupWindow", e);
