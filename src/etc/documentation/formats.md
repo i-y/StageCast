@@ -115,6 +115,8 @@ The program stores all models in a unified data file, called simply `models.xml`
 
 @warning Manual editing of this file should be carried out carefully as the program does not have as many recovery facilities for this file as it does for the other information files it creates and uses.
 
+@todo remove redundant `<iter></iter>` tages from stats portion.
+
 **File Format**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -134,10 +136,16 @@ The program stores all models in a unified data file, called simply `models.xml`
         <organismFile>Second organism file location</organismFile>
         ...
         <organismFile>Nth organism file location</organismFile>
-        <param>Parameter 1 value</param>
-        <param>Parameter 2 value</param>
+        <param>
+            <val>Parameter 1 value</val>
+        </param>
+        <param>
+            <val>Parameter 2 value</val>
+        </param>
         ...
-        <param>Parameter N value</param>
+        <param>
+            <val>Parameter N value</val>
+        </param>
         <stageMap>F0:G0</stageMap>
         <stageMap>F1:G1</stageMap>
         ...
@@ -145,6 +153,37 @@ The program stores all models in a unified data file, called simply `models.xml`
         <log>Negative Log Likelihood</log>
         <aic>Akaike Information Criterion</aic>
         <optim>Optimization Method</optim>
+        <stats>
+            <iter>Iteration Count</iter>
+            <alpha>Alpha value used</alpha>
+            <stages>Number of stages processed</stages>
+            <gg>The G-Squared value</gg>
+            <ggPval>The P-Value for the G-Squared test</ggPval>
+            <ggci>
+                <low>The low value of the G-Squared confidence interval</low>
+                <high>The high value of the G-Squared confidence interval</high>
+            </ggci>
+            <optim>Optimization Method</optim>
+            <xx>
+                <stat>The X-Squared statistic</stat>
+                <p>The P-Value for the X-Squared statistic</p>
+                <low>The low value of the X-Squared confidence interval</low>
+                <high>The high value of the X-Squared confidence interval</high>
+            </xx>
+            <aparam>
+                <val>The final value for this parameter</val>
+                <low>The lowest value calculated for this parameter</val>
+                <high>The highest value calculated for this parameter</high>
+            </aparam>
+            <vparam>
+                <val>The final value for the variance parameter</val>
+                <low>The lowest value calculated for the variance parameter</val>
+                <high>The highest value calculated for the variance parameter</high>
+            </vparam>
+            <aStar>
+                Intermediate script output. Should be removed completely in later versions.
+            </aStar>
+        </stats>
     </model>
 </models>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
