@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="generator" content="http://www.nongnu.org/elyxer/"/>
-<meta name="create-date" content="2014-09-02"/>
+<meta name="create-date" content="2014-09-23"/>
 <link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
 <title>StageCast User Guide</title>
 </head>
@@ -14,7 +14,7 @@
 StageCast User Guide
 </h1>
 <h2 class="Date">
-08/29/2014
+09/23/2014
 </h2>
 <div class="Unindented">
 <p><br/>
@@ -513,7 +513,7 @@ Below these boxes is a table showing the confidence intervals for the model para
 
 </div>
 <h2 class="Subsection">
-<a class="toc" name="toc-Subsection-4.2">4.2</a> Model Creation Window
+<a class="toc" name="toc-Subsection-4.2">4.2</a> Model Creation Window<a class="Label" name="sub:Model-Creation-Window"> </a>
 </h2>
 <div class="Unindented">
 The model creation window, as you’ve probably already gathered, is the screen that allows you to create a new model. It is opened by clicking the &ldquo;New&rdquo; button in the &ldquo;Model&rdquo; tab in the main window.
@@ -697,7 +697,74 @@ Along the bottom of the tab screen are three buttons. The first two are position
 <a class="toc" name="toc-Section-6">6</a> Forecast
 </h1>
 <div class="Unindented">
-[TODO]
+<img class="embedded" src="pics/forecast/1.png" alt="figure pics/forecast/1.png" style="max-width: 298px; max-height: 69px;"/>
+
+</div>
+<div class="Indented">
+The &ldquo;Forecast&rdquo; tab produces visualizations which predict the behavior of a group of organisms based on the model and statistics which were found elsewhere in the program. Functionally, the controls for this tab were designed to be identical to the equivalent controls on the &ldquo;Graph&rdquo; tab, so most of this section of the user guide will be looking at the figures in particular, rather than the controls themselves.
+</div>
+<div class="Indented">
+The first two controls are drop-down menus which allow you to choose a weather and model dataset to use. Note that there is no option to select an organism database. This is because the model contains all information needed to make forecasts about the organism dataset which was originally used to make the model. By default, the weather dataset is the one which was used to create the model in the first place but it is expected that users will more commonly want to forecast the model against a new weather dataset.
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/2.png" alt="figure pics/forecast/2.png" style="width: 133px; max-width: 190px; height: 46px; max-height: 66px;"/>
+
+</div>
+<div class="Indented">
+As in the &ldquo;Graph&rdquo; tab, the next two controls let you specify the height and width of all created figures in pixels.
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/3.png" alt="figure pics/forecast/3.png" style="width: 125px; max-width: 179px; height: 37px; max-height: 54px;"/>
+
+</div>
+<div class="Indented">
+The next set of controls are used to create the forecast figure itself. This figure is the key focus of this tab and, in many ways, the entire program. The first check-box is whether or not the prediction figure should be produced at all. The check-box directly under the first offers the ability to show error bars on the figure. It the margin is tight, error bars are likely to be distracting or obscured entirely; however, they may be informative on datasets with less tight bounds. The next two controls allows you to pick which point in time to predict. The example figure will find the point in time at which 39.4% of the population is in model stage 3 or less. Remember that model stages do not have to be the same as organism growth stages. Please reference section <a class="Reference" href="#sub:Model-Creation-Window">4.2↑</a> for details on how model stages can be set up during model creation. Lastly, the final two text boxes allow you to set a range in degree days for the resulting figure.
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/4.png" alt="figure pics/forecast/4.png" style="width: 111px; max-width: 159px; height: 86px; max-height: 124px;"/>
+
+</div>
+<div class="Indented">
+The image below shows what the figure produced by these settings looks like:
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/4p.png" alt="figure pics/forecast/4p.png" style="width: 360px; max-width: 600px; height: 296px; max-height: 494px;"/>
+
+</div>
+<div class="Indented">
+The second available option is to produce figures showing the mean and median for each stage. These figures currently have no configuration settings.
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/5.png" alt="figure pics/forecast/5.png" style="width: 156px; max-width: 223px; height: 16px; max-height: 23px;"/>
+
+</div>
+<div class="Indented">
+The image below shows an example of the type of figures generated by this option:
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/5p.png" alt="figure pics/forecast/5p.png" style="width: 360px; max-width: 600px; height: 296px; max-height: 494px;"/>
+
+</div>
+<div class="Indented">
+The next set of controls are used to produce a goodness-of-fit figure or figures. The first is the checkbox which determines if this figure or set of figures is produced at all. Below the checkbox are two text boxes which show the range in degree days for the figures. The last control lets you choose whether the goodness-of-fit lines for each stage will be drawn on a single figure, or if each model stage will be graphed on its own figure.
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/6.png" alt="figure pics/forecast/6.png" style="width: 128px; max-width: 184px; height: 79px; max-height: 113px;"/>
+
+</div>
+<div class="Indented">
+The image below shows what the figure produced by these settings looks like:
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/6p.png" alt="figure pics/forecast/6p.png" style="width: 360px; max-width: 600px; height: 296px; max-height: 494px;"/>
+
+</div>
+<div class="Indented">
+The final set of controls are as you’d expect from using the &ldquo;Graph&rdquo; tab. The &ldquo;Graph&rdquo; button will create the figures using the settings you’ve chosen above. The two buttons directly below the figure are used to browse forward or backwards through the list of generated figures. Lastly, the &ldquo;Save&rdquo; button will let you save the current figure to a location of your choice.
+</div>
+<div class="Indented">
+<img class="embedded" src="pics/forecast/7.png" alt="figure pics/forecast/7.png" style="width: 623px; max-width: 891px; height: 140px; max-height: 201px;"/>
+
 </div>
 <h1 class="Section">
 <a class="toc" name="toc-Section-7">7</a> Settings <a class="Label" name="sec:Settings"> </a>
@@ -847,7 +914,7 @@ There is a third class of output files which should be mentioned. The StageCast 
 
 <hr class="footer"/>
 <div class="footer" id="generated-by">
-Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> on <span class="create-date">2014-09-02T11:46:19.816000</span>
+Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> on <span class="create-date">2014-09-23T14:05:50.934000</span>
 </div>
 </div>
 </body>

@@ -1124,7 +1124,7 @@ public class MainWindow {
     
     private void setupHelpWindow() {
         WebEngine webEngine = helpWebView.getEngine();
-        webEngine.load(this.getClass().getResource("/etc/documentation/html/doc.html").toExternalForm());
+        webEngine.load(this.getClass().getResource("/etc/documentation/html/documentation.html").toExternalForm());
         history = webEngine.getHistory();
     }
 	
