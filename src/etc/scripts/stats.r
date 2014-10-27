@@ -26,14 +26,14 @@ rm(list=ls(all=TRUE))
 # Function takes the array holding the per-stage phenology data and collapses stages in to 
 # each other based on the user's inputs.
 #
-# The mapping is done using two numbers, X and Y, in a string of the format “X:Y”
+# The mapping is done using two numbers, X and Y, in a string of the format "X:Y"
 #	The X number is the original index of a given stage
 #	The Y number is the index the stage information should be added to for the final output
-#	If a given index is not collapsed into another one the map takes the form of “X:X”
+#	If a given index is not collapsed into another one the map takes the form of "X:X"
 #
 # Takes:
-#   Original – Array holding the unmodified phenology information
-#   stageMap – vector of strings holding the map from one stage to another.
+#   Original - Array holding the unmodified phenology information
+#   stageMap - vector of strings holding the map from one stage to another.
 #
 # Returns: Array with the number of columns equal to or less than the number of columns in 
 # the input array.
@@ -64,9 +64,9 @@ collapse = function(original,stageMap) {
 # Note: assumes input in Celsius
 #
 # Takes:
-#   x – name of temperature data file
-#   upper – high bound
-#   lower – low bound
+#   x     - name of temperature data file
+#   upper - high bound
+#   lower - low bound
 #
 # Returns: Vector of time values expressed in degree days.
 #
@@ -137,9 +137,9 @@ doubleSine = function(x, upper, lower){
 # Function to be maximized. 
 #
 # Takes:
-#   params  – list of log(initial estimates)
-#   T       – time vector
-#   dataset – phenology data matrix
+#   params  - list of log(initial estimates)
+#   T       - time vector
+#   dataset - phenology data matrix
 #
 # Returns: log likelihood 
 #

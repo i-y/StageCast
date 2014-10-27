@@ -259,15 +259,15 @@
                 <TextField fx:id="forecastStageTxt" layoutX="94.0" layoutY="190.0" prefWidth="59.0" text="1" />
                 <TextField fx:id="forecastPercentTxt" layoutX="94.0" layoutY="217.0" prefWidth="59.0" text="50" />
                 <CheckBox fx:id="forecastFitCheckBx" layoutX="15.0" layoutY="305.0" mnemonicParsing="false" selected="true" text="Goodness-Of-Fit" />
-                <Button layoutX="58.0" layoutY="414.0" mnemonicParsing="false" onAction="#forecast" text="Graph" />
-                <Button id="prevBtn" layoutX="530.0" layoutY="520.0" mnemonicParsing="false" onAction="#forecastPrev" text="Prev" />
-                <Button id="nextBtn" layoutX="584.0" layoutY="520.0" mnemonicParsing="false" onAction="#forecastNext" text="Next" />
+                <Button fx:id="forecastGraphBtn" layoutX="58.0" layoutY="414.0" mnemonicParsing="false" onAction="#forecast" text="Graph" />
+                <Button id="prevBtn" fx:id="forecastPrevBtn" layoutX="530.0" layoutY="520.0" mnemonicParsing="false" onAction="#forecastPrev" text="Prev" />
+                <Button id="nextBtn" fx:id="forecastNextBtn" layoutX="584.0" layoutY="520.0" mnemonicParsing="false" onAction="#forecastNext" text="Next" />
                 <CheckBox fx:id="forecastErrorCheckBx" layoutX="51.0" layoutY="169.0" mnemonicParsing="false" text="Show Error Bars" />
-                <Button layoutX="817.0" layoutY="521.0" mnemonicParsing="false" onAction="#forecastSave" text="Save" />
+                <Button fx:id="forecastSaveBtn" layoutX="817.0" layoutY="521.0" mnemonicParsing="false" onAction="#forecastSave" text="Save" />
                 <Label layoutX="14.0" layoutY="330.0" text="Range:" />
                 <TextField fx:id="forecastFitLowTxtBx" layoutX="53.0" layoutY="330.0" prefWidth="52.9998779296875" text="1" />
                 <TextField fx:id="forecastFitHighTxtBx" layoutX="111.0" layoutY="330.0" prefWidth="53.0" text="0" />
-                <RadioButton layoutX="37.0" layoutY="359.0" mnemonicParsing="false" text="All Stages On One Figure">
+                <RadioButton fx:id="forecastAllFigureStageBtn" layoutX="37.0" layoutY="359.0" mnemonicParsing="false" text="All Stages On One Figure">
                   <toggleGroup>
                     <ToggleGroup fx:id="forecastFigureToggle" />
                   </toggleGroup>

@@ -171,17 +171,22 @@ public class MainWindow {
     public TextField expPropLowTxt; /*!< The low range for the prediction graph. */
     public TextField figureSaveTxt; /*!< The default place to save generated figures. */
     public ImageView figureView; /*!< Displays the generated figures. */
+    public RadioButton forecastAllFigureStageBtn; /*!< To put all stages on one figure in the fitness test. */
     public CheckBox forecastErrorCheckBx; /*!< Show error bars for the prediction figure. */
     public CheckBox forecastFitCheckBx; /*!< Goodness-Of-Fit tests. */
     public TextField forecastFitHighTxtBx; /*!< High range for fitness test. */
     public TextField forecastFitLowTxtBx; /*!< Low range for fitness graph. */
+    public Button forecastGraphBtn; /*!< Generate selected forecasting figures. */
     public TextField forecastHeightTxt; /*!< Height of generated forecast figures. */
     public ComboBox<String> forecastModelCmbBx; /*!< Model to use for forecasting. */
+    public Button forecastNextBtn; /*!< Go to the next figure. */
     public RadioButton forecastOneFigureStageBtn; /*!< To use one figure per stage in the fitness test. */
     public TextField forecastPercentTxt; /*!< Percent to use as the prediction target. */
     public TextField forecastPredictHigh; /*!< High range for prediction figure. */
     public TextField forecastPredictLow; /*!< Low range for prediction figure. */
     public CheckBox forecastPredictionCheckBx; /*!< Predict when the population will be in a certain stage. */
+    public Button forecastPrevBtn; /*!< Go to the previous figure. */
+    public Button forecastSaveBtn; /*!< Save the current figure. */
     public TextField forecastStageTxt; /*!< Stage to use in prediction figure. */
     public CheckBox forecastTendenciesCheckBx; /*!< Measures Of Central Tendency */
     public ImageView forecastView; /*!< Shows forecast figures. */
@@ -423,6 +428,24 @@ public class MainWindow {
         expPropCheckBx.setTooltip(null);
         expPropHighTxt.setTooltip(null);
         expPropLowTxt.setTooltip(null);
+        forecastAllFigureStageBtn.setTooltip(null);
+        forecastErrorCheckBx.setTooltip(null);
+        forecastFitCheckBx.setTooltip(null);
+        forecastFitHighTxtBx.setTooltip(null);
+        forecastFitLowTxtBx.setTooltip(null);
+        forecastGraphBtn.setTooltip(null);
+        forecastHeightTxt.setTooltip(null);
+        forecastModelCmbBx.setTooltip(null);
+        forecastOneFigureStageBtn.setTooltip(null);
+        forecastPercentTxt.setTooltip(null);
+        forecastPredictHigh.setTooltip(null);
+        forecastPredictLow.setTooltip(null);
+        forecastPredictionCheckBx.setTooltip(null);
+        forecastSaveBtn.setTooltip(null);
+        forecastStageTxt.setTooltip(null);
+        forecastTendenciesCheckBx.setTooltip(null);
+        forecastWeatherCmbBx.setTooltip(null);
+        forecastWidthTxt.setTooltip(null);
         ggTxt.setTooltip(null);
         ggciHighTxt.setTooltip(null);
         ggciLowTxt.setTooltip(null);
@@ -1071,13 +1094,31 @@ public class MainWindow {
         expPropCheckBx.setTooltip(new Tooltip("Create a graph of the predicted proportions of the life stages over time."));
         expPropHighTxt.setTooltip(new Tooltip("The high end of the x-axis for the predicted proportion graph (0 = all)."));
         expPropLowTxt.setTooltip(new Tooltip("The low end of the x-axis for the predicted proportion graph."));
+        forecastAllFigureStageBtn.setTooltip(new Tooltip("All stages shown on a single figure."));
+        forecastErrorCheckBx.setTooltip(new Tooltip("Add error bars showing the minimum and maximum possible values."));
+        forecastFitCheckBx.setTooltip(new Tooltip("Create a figure showing the predicted line as well as dotted lines showing the minimum and maximum value."));
+        forecastFitHighTxtBx.setTooltip(new Tooltip("The high end of the x-axis. (0 = all)"));
+        forecastFitLowTxtBx.setTooltip(new Tooltip("The low end of the x-axis"));
+        forecastGraphBtn.setTooltip(new Tooltip("Generate the selected figures."));
+        forecastHeightTxt.setTooltip(new Tooltip("The height of all created figures in pixels."));
+        forecastModelCmbBx.setTooltip(new Tooltip("Choose a model to use. NOTE: Must have run statistics on it first."));
+        forecastOneFigureStageBtn.setTooltip(new Tooltip("Each stage is on a separate figure."));
+        forecastPercentTxt.setTooltip(new Tooltip("What percentage of the population is in the chosen stage"));
+        forecastPredictHigh.setTooltip(new Tooltip("The high end of the x-axis. (0 = all)"));
+        forecastPredictLow.setTooltip(new Tooltip("The low end of the x-axis"));
+        forecastPredictionCheckBx.setTooltip(new Tooltip("Create a forecast figure."));
+        forecastSaveBtn.setTooltip(new Tooltip("Save current figure"));
+        forecastStageTxt.setTooltip(new Tooltip("The stage to use in the forecast."));
+        forecastTendenciesCheckBx.setTooltip(new Tooltip("Create a figure showing the central tendencies for each stage in the model."));
+        forecastWeatherCmbBx.setTooltip(new Tooltip("Choose a weather dataset to use."));
+        forecastWidthTxt.setTooltip(new Tooltip("The width of all created figures in pixels."));
         ggTxt.setTooltip(new Tooltip("The estimated G-Squared value."));
         ggciHighTxt.setTooltip(new Tooltip("The high end of the estimated confidence interval for the G-Squared value."));
         ggciLowTxt.setTooltip(new Tooltip("The low end of the estimated confidence interval for the G-Squared value."));
         ggpTxt.setTooltip(new Tooltip("The estimated P-value of the G-Squared value."));
         graphBtn.setTooltip(new Tooltip("Create the currently selected graphs."));
-        imageHeightTxt.setTooltip(new Tooltip("The height of all created images."));
-        imageWidthTxt.setTooltip(new Tooltip("The width of all created images."));
+        imageHeightTxt.setTooltip(new Tooltip("The height of all created images in pixels."));
+        imageWidthTxt.setTooltip(new Tooltip("The width of all created images in pixels."));
         iterTxt.setTooltip(new Tooltip("Number of times to run statistical tests."));
         loadOrgBtn.setTooltip(new Tooltip("Load a previously created dataset in to the program."));
         loadWeatherBtn.setTooltip(new Tooltip("Load a previously created dataset in to the program"));
