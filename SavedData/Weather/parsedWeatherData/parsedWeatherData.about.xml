@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<about>
+    <name>parsedWeatherData</name>
+    <date>10/29/2014</date>
+    <time>11:59:37</time>
+    <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/parsedWeatherData/parsedWeatherData.about.xml</location>
+    <type>Weather</type>
+    <stages>0</stages>
+    <stageNames/>
+    <size>1</size>
+    <members>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/parsedWeatherData/parsedWeatherData.weather.txt</location>
+            <name>weather</name>
+        </member>
+    </members>
+</about>

@@ -887,7 +887,7 @@ public class MainWindow {
     private void populateStageNames() {
         if(!settings.loadedOrganism.isEmpty()) {
             DatabaseObject loadedOrganismInfo = XmlManager.readDatabaseFile(settings.loadedOrganism);
-            if(loadedOrganismInfo.stages > 0) {
+            if((loadedOrganismInfo != null)&&(loadedOrganismInfo.stages > 0)) {
                 ObservableList<TextFieldListCell> names = FXCollections.observableArrayList();
                 for(String stageName : loadedOrganismInfo.memberStages) {
                     TextFieldListCell t = new TextFieldListCell();
@@ -1393,11 +1393,13 @@ public class MainWindow {
         }
         if(!settings.loadedOrganism.isEmpty()) {
             DatabaseObject loadedOrganismInfo = XmlManager.readDatabaseFile(settings.loadedOrganism);
-            stagesTxt.setText(String.valueOf(loadedOrganismInfo.stages));
-            membersTxt.setText(String.valueOf(loadedOrganismInfo.memberLocations.length));
-            ObservableList<String> organisms = FXCollections.observableArrayList();
-            organisms.addAll(Arrays.asList(loadedOrganismInfo.memberNames));
-            organismList.setItems(organisms);
+            if(loadedOrganismInfo != null) {
+                stagesTxt.setText(String.valueOf(loadedOrganismInfo.stages));
+                membersTxt.setText(String.valueOf(loadedOrganismInfo.memberLocations.length));
+                ObservableList<String> organisms = FXCollections.observableArrayList();
+                organisms.addAll(Arrays.asList(loadedOrganismInfo.memberNames));
+                organismList.setItems(organisms);
+            }
         }
         populateStageNames();
     }

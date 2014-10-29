@@ -22,5 +22,9 @@
             <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.about.xml</location>
             <name>billsWeather</name>
         </weather>
+        <weather>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/parsedWeatherData/parsedWeatherData.about.xml</location>
+            <name>parsedWeatherData</name>
+        </weather>
     </weatherList>
 </settings>
