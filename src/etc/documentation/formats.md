@@ -115,7 +115,7 @@ The program stores all models in a unified data file, called simply `models.xml`
 
 @warning Manual editing of this file should be carried out carefully as the program does not have as many recovery facilities for this file as it does for the other information files it creates and uses.
 
-@todo remove redundant `<iter></iter>` tages from stats portion.
+@todo remove redundant `<iter></iter>` tags from stats portion.
 
 **File Format**
 

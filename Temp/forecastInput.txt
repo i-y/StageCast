@@ -1,5 +1,5 @@
 tag	data
-weather	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/billsWeather/billsWeather.weather.txt
+weather	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/parsedWeatherData/parsedWeatherData.weather.txt
 params	646.186243742644
 params	786.985418821609
 params	847.991088971317
@@ -25,12 +25,12 @@ fitHigh	0
 fitLow	1
 height	700
 saveLoc	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Temp\Figures\Forecast
-predict	0
+predict	1
 predictHigh	0
 predictLow	1
 proportionPercent	0.5
 proportionStage	1
-tendencies	0
+tendencies	1
 width	850
 astar	644.693506078797
 astar	787.432468323725

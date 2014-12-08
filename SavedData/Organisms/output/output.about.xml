@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<about>
+    <name>output</name>
+    <date>10/30/2014</date>
+    <time>15:30:06</time>
+    <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.about.xml</location>
+    <type>Organism</type>
+    <stages>8</stages>
+    <stageNames>
+        <nameVal>Stage 0</nameVal>
+        <nameVal>Stage 1</nameVal>
+        <nameVal>Stage 2</nameVal>
+        <nameVal>Stage 3</nameVal>
+        <nameVal>Stage 4</nameVal>
+        <nameVal>Stage 5</nameVal>
+        <nameVal>Stage 6</nameVal>
+        <nameVal>Stage 7</nameVal>
+    </stageNames>
+    <size>10</size>
+    <members>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.California.txt</location>
+            <name>California</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Carmel.txt</location>
+            <name>Carmel</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Neplus.txt</location>
+            <name>Neplus</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Sonora.txt</location>
+            <name>Sonora</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Peerless.txt</location>
+            <name>Peerless</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Monterey.txt</location>
+            <name>Monterey</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Butte.txt</location>
+            <name>Butte</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Padre.txt</location>
+            <name>Padre</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Nonpareil.txt</location>
+            <name>Nonpareil</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/output/output.Mission.txt</location>
+            <name>Mission</name>
+        </member>
+    </members>
+</about>

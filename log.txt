@@ -1,0 +1,8 @@
+Wed Nov 26 11:59:53 CST 2014
+Model creation failed The script to create the model was run but no output could be found even though no error messages were recieved.
+null
+
+Wed Nov 26 11:59:56 CST 2014
+ModelWindow.model() encountered an error as it tried to add the new model to the existing database of models.
+java.lang.NullPointerException
+
