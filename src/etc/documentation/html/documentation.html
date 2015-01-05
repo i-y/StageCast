@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="generator" content="http://www.nongnu.org/elyxer/"/>
-<meta name="create-date" content="2014-09-23"/>
+<meta name="create-date" content="2014-12-24"/>
 <link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
 <title>StageCast User Guide</title>
 </head>
@@ -14,7 +14,7 @@
 StageCast User Guide
 </h1>
 <h2 class="Date">
-09/23/2014
+10/21/2014
 </h2>
 <div class="Unindented">
 <p><br/>
@@ -790,7 +790,16 @@ Lastly, the &ldquo;Reset All&rdquo; button will set everything back to StageCast
 <a class="toc" name="toc-Subsection-A.1">A.1</a> Algorithms <a class="Label" name="sub:Algorithms"> </a>
 </h2>
 <div class="Unindented">
-[TODO]
+The statistical underpinnings of StageCast are described in detail in Dennis et al 1986<span class="FootOuter"><span class="SupFootMarker"> [E] </span><span class="HoverFoot"><span class="SupFootMarker"> [E] </span>Dennis, Brian, William P. Kemp, and Roy C. Beckwith. "Stochastic Model of Insect Phenology: Estimation and Testing." <i>Environmental Entomology</i>. 15.3 (1986): 540- 546. Print.</span></span> and Dennis &amp; Kemp 1988<span class="FootOuter"><span class="SupFootMarker"> [F] </span><span class="HoverFoot"><span class="SupFootMarker"> [F] </span>Dennis, Brian, and William P. Kemp. "Further Statistical Inference Methods for a Stochastic Model of Insect Phenology." <i>Environmental Entomology</i>. 17.5 (1988): 887- 893. Print.</span></span> and represent improvements and extensions to work first presented by Osawa et al. 1983<span class="FootOuter"><span class="SupFootMarker"> [G] </span><span class="HoverFoot"><span class="SupFootMarker"> [G] </span>Osawa, Akira, Christine A. Shoemaker, and Christine A. Stedinger. "A Stochastic Model of Balsam Fir Bud Phenology Utilizing Maximum Likelihood Parameter Estimation." <i>Forest Science</i>. 29.3 (1983): 478-490. Print.</span></span> that allow for wider application in the biological sciences. 
+</div>
+<div class="Indented">
+The model assumes that the development of a given organism is a stochastic process consisting of accumulated small increments of development time. The process <span class="formula"><i>S</i>(<i>t</i>)</span> is defined as the amount of development time an insect has accumulated by actual time t. <span class="formula"><i>S</i>(<i>t</i>)</span> and t can be measured in Degree Days, as indicated by results with the western spruce budworm<span class="FootOuter"><span class="SupFootMarker"> [H] </span><span class="HoverFoot"><span class="SupFootMarker"> [H] </span>Kemp, William P., Brian Dennis, Roy C. Beckwith. &ldquo;Stochastic Phenology Model for the Western Spruce Budworm (Lepidoptera: Tortricidae)&rdquo; <i>Environmental Entomology</i>.15 (1986): 547 - 554. Print.</span></span>, with rangeland grasshoppers<span class="FootOuter"><span class="SupFootMarker"> [I] </span><span class="HoverFoot"><span class="SupFootMarker"> [I] </span>Kemp, William P., Jerome A. Onsager. “Rangeland Grasshoppers (Orthoptera: Acrididae): Modeling Phenology of Natural Populations of Six Species.” <i>Environmental Entomology</i>. 15 (1986): 924 – 930. Print.</span></span>, and with balsam fir buds (Osawa et al. 1983). The process is assumed to begin with the insect or plant in a given life stage (i.e., egg or instar) at time <span class="formula"><i>t</i> = 0</span>. As the amount of development <span class="formula"><i>S</i>(<i>t</i>)</span> increases, the organism passes through successive stages, with the stages delimited by specific developmental characteristics.
+</div>
+<div class="Indented">
+Dennis et al 1986 describes the model specifics and shows how changing the original underlying probability distribution simplifies computation. Also described are: 1) how to obtain estimates of the model parameters for a given data set on insect (or plant) development; 2) how maximum likelihood estimates of the parameters are easily computed via non-linear numerical methods; and 3) how formal statistical hypothesis tests about the model can be conducted.
+</div>
+<div class="Indented">
+Dennis &amp; Kemp 1988 describes three additional statistical inference procedures based on the Dennis et al. (1986) phenology model: 1) a confidence interval for <span class="formula"><i>p</i><sub><i>i</i></sub>(<i>t</i>)</span>, the proportion of insects in stage i at time t; 2) a confidence interval for the time, t,*’, at which <span class="formula"><i>p</i><sub><i>i</i></sub>(<i>t</i>)</span> is maximum; and 3) a goodness-of-fit test for the deviation of an observation from its expected value under the model for a single stage and time. 
 </div>
 <h2 class="Subsection">
 <a class="toc" name="toc-Subsection-A.2">A.2</a> Code<a class="Label" name="sub:Code"> </a>
@@ -894,7 +903,7 @@ If you wish, you can open the output file in Windows Notepad to see if everythin
 <a class="toc" name="toc-Subsection-B.2">B.2</a> Output Files <a class="Label" name="sub:Output-Files"> </a>
 </h2>
 <div class="Unindented">
-StageCast produces a variety of output files which it uses to store datasets and models, as well as figures and forecasts. This section provides only a brief overview of these files, but a much more thorough documentation is contained in the StageCast Technical Guide described in Appendix <a class="Reference" href="#sub:Code">A.2↑</a>. The first thing to note is that all files output by StageCast, with the exception of images, are in the XML format<span class="FootOuter"><span class="SupFootMarker"> [E] </span><span class="HoverFoot"><span class="SupFootMarker"> [E] </span>http://en.wikipedia.org/wiki/XML</span></span>. This format, which is very similar to HTML, is a way of describing data in a structured way using named tags. These files are in plain-text, which means that you can open, read, and modify them using Windows Notepad or any other text editor. The files are structured in a way which will hopefully make them somewhat self-explanatory without needing to resort to the StageCast Technical Guide; however, the topic is inherently rather technical so it may be necessary to consult the Technical Guide anyway depending on what you wish to accomplish.
+StageCast produces a variety of output files which it uses to store datasets and models, as well as figures and forecasts. This section provides only a brief overview of these files, but a much more thorough documentation is contained in the StageCast Technical Guide described in Appendix <a class="Reference" href="#sub:Code">A.2↑</a>. The first thing to note is that all files output by StageCast, with the exception of images, are in the XML format<span class="FootOuter"><span class="SupFootMarker"> [J] </span><span class="HoverFoot"><span class="SupFootMarker"> [J] </span>http://en.wikipedia.org/wiki/XML</span></span>. This format, which is very similar to HTML, is a way of describing data in a structured way using named tags. These files are in plain-text, which means that you can open, read, and modify them using Windows Notepad or any other text editor. The files are structured in a way which will hopefully make them somewhat self-explanatory without needing to resort to the StageCast Technical Guide; however, the topic is inherently rather technical so it may be necessary to consult the Technical Guide anyway depending on what you wish to accomplish.
 </div>
 <div class="Indented">
 The other main type of files output by StageCast are temporary images. As described in Section <a class="Reference" href="#sec:Settings">7↑</a>, all figures are output to a directory you can set in that tab. These image files can be manually copy/pasted if desired. They are called temporary images purely because the program makes no effort to preserve them and will overwrite them the next time a figure is requested. Figures can be saved from within the &ldquo;Graph&rdquo; tab as well, in which case they will be stored in the location the user designates. 
@@ -914,7 +923,7 @@ There is a third class of output files which should be mentioned. The StageCast 
 
 <hr class="footer"/>
 <div class="footer" id="generated-by">
-Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> on <span class="create-date">2014-09-23T14:05:50.934000</span>
+Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.5 (2013-03-10)</a> on <span class="create-date">2014-12-24T11:02:17.391000</span>
 </div>
 </div>
 </body>
