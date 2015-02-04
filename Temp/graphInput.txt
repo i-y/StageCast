@@ -1,34 +1,20 @@
 tag	data
-weather	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Weather/parsedWeatherData2/parsedWeatherData2.weather.txt
-species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataParsed/speciesDataParsed.California.txt
-species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataParsed/speciesDataParsed.Carmel.txt
-species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataParsed/speciesDataParsed.Sonora.txt
-species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataParsed/speciesDataParsed.Butte.txt
-species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataParsed/speciesDataParsed.Padre.txt
-species	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/speciesDataParsed/speciesDataParsed.Nonpareil.txt
+weather	C:/Users/ian.yocum/Documents/work/programming/netBeansprograms/StageCast/SavedData/Weather/billsWeather/billsWeather.weather.txt
+species	C:/Users/ian.yocum/Documents/work/programming/netBeansprograms/StageCast/SavedData/Organisms/billsOrg/billsOrg.x.txt
 stage	Stage 0
 stage	Stage 1
 stage	Stage 2
 stage	Stage 3
-stage	Stage 4
-stage	Stage 5
-stage	Stage 6
-saveLoc	C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Temp\Figures\Graph
-params	194.696262039052
-params	236.38023637442
-params	274.188136863942
-params	290.678614974003
-params	343.573065521227
-params	360.007643935156
-params	0.925403635236614
-logLike	-794.058092052494
+saveLoc	C:/Users/ian.yocum/Documents/work/programming/netBeansprograms/StageCast/Temp/Figures/Graph
+params	2584.18774128093
+params	3163.93234131345
+params	3517.77524524101
+params	0.268208435542069
+logLike	-14.6175547618656
 stageMap	0:0
 stageMap	1:1
 stageMap	2:2
 stageMap	3:3
-stageMap	4:4
-stageMap	5:5
-stageMap	6:6
 log3d	1
 log2d	1
 expProp	1

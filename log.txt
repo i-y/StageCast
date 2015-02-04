@@ -6,3 +6,11 @@ Wed Nov 26 11:59:56 CST 2014
 ModelWindow.model() encountered an error as it tried to add the new model to the existing database of models.
 java.lang.NullPointerException
 
+Wed Feb 04 11:35:05 CST 2015
+Could not save data file C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Raw\Weather\billsWeather.txt/billsWeather/billsWeather.about.xml XmlManager.writeDatabaseFile has found that an error occurred while attempting write to the XML file C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Raw\Weather\billsWeather.txt/billsWeather/billsWeather.about.xml
+java.io.FileNotFoundException: C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Raw\Weather\billsWeather.txt\billsWeather\billsWeather.about.xml (The system cannot find the path specified)
+
+Wed Feb 04 11:35:12 CST 2015
+Could not save the imported file as a database. Importer.save has encountered an error.
+java.io.FileNotFoundException: C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\Raw\Weather\billsWeather.txt\billsWeather\billsWeather.15.9.txt (The system cannot find the path specified)
+

@@ -116,7 +116,7 @@ public class ScriptManager {
                     cmd[1] = "-c";
                     cmd[2] = command;
                 } else if(System.getProperty("os.name").startsWith("Windows"))  {
-                    String command = "R --vanilla <" + path + " > nul 2> nul  --args " + path2;
+                    String command = "R --vanilla <\"" + path + "\" > nul 2> nul  --args \"" + path2 + "\"";
                     cmd[0] = "cmd";
                     cmd[1] = "/c";
                     cmd[2] = command;
@@ -152,14 +152,14 @@ public class ScriptManager {
                 outpt.write("tag\tdata\r\n");
                 outpt.write("weather\t" + weather + "\r\n");
                 for (String OrganismFile : organisms) {
-                    outpt.write("species\t" + OrganismFile + "\r\n");
+                    outpt.write("species\t" + OrganismFile.replace("\\", "/") + "\r\n");
                 }
                 if(settings.organismStageNames != null) {
                     for (String OrganismStageName : settings.organismStageNames) {
                         outpt.write("stage\t" + OrganismStageName + "\r\n");
                     }
                 }
-                outpt.write("saveLoc\t" + (new File(settings.outputLoc).getAbsolutePath()) + "\r\n");
+                outpt.write("saveLoc\t" + new File(settings.outputLoc).getAbsolutePath() + "\r\n");
                 for(int i = 0; i < model.paramCount; i++) {
                     outpt.write("params\t" + model.params[i] + "\r\n");
                 }
@@ -222,7 +222,7 @@ public class ScriptManager {
                 cmd[1] = "-c";
                 cmd[2] = command;
             } else if(System.getProperty("os.name").startsWith("Windows"))  {
-                String command = "R --vanilla <" + path + " > nul 2> nul  --args " + path2;
+                String command = "R --vanilla <\"" + path + "\" > nul 2> nul  --args \"" + path2 + "\"";
                 cmd[0] = "cmd";
                 cmd[1] = "/c";
                 cmd[2] = command;
@@ -256,14 +256,14 @@ public class ScriptManager {
         try {
             try (BufferedWriter outpt = new BufferedWriter(new FileWriter("Temp/modelInput.txt"))) {
                 outpt.write("tag\tdata\r\n");
-                outpt.write("weather\t" + inpt.weatherDatabaseLocation + "\r\n");
+                outpt.write("weather\t" + inpt.weatherDatabaseLocation.replace("\\", "/") + "\r\n");
                 for (String organismFile : inpt.OrganismFiles) {
-                    outpt.write("species\t" + organismFile + "\r\n");
+                    outpt.write("species\t" + organismFile.replace("\\", "/") + "\r\n");
                 }
                 for (String map : inpt.stageMap) {
                     outpt.write("stageMap\t" + map + "\r\n");
                 }
-                outpt.write("saveLoc\t" + (new File("Temp").getAbsolutePath()) + "\r\n");
+                outpt.write("saveLoc\t" + new File("Temp").getAbsolutePath()+ "\r\n");
                 outpt.write("optim\t" + inpt.optim + "\r\n");
                 if(inpt.params != null) {
                     for(String s : inpt.params) {
@@ -281,10 +281,11 @@ public class ScriptManager {
                 cmd[1] = "-c";
                 cmd[2] = command;
             } else if(System.getProperty("os.name").startsWith("Windows"))  {
-                String command = "R --vanilla <" + path + " > nul 2> nul --args " + path2 + " " + path3;
+                String command = "R --vanilla <\"" + path + "\" > nul 2> nul --args \"" + path2 + "\" \"" + path3 + "\"";
                 cmd[0] = "cmd";
                 cmd[1] = "/c";
                 cmd[2] = command;
+                System.out.println(command);
             }
             Process p = new ProcessBuilder(cmd).redirectError(Redirect.INHERIT).redirectOutput(Redirect.INHERIT).start();
             p.waitFor();
@@ -324,12 +325,12 @@ public class ScriptManager {
                 outpt.write("tag\tdata\r\n");
                 outpt.write("weather\t" + weather.memberLocations[0] + "\r\n");
                 for (String OrganismFile : organism.memberLocations) {
-                    outpt.write("species\t" + OrganismFile + "\r\n");
+                    outpt.write("species\t" + OrganismFile.replace("\\", "/") + "\r\n");
                 }
                 for (String map : params.stageMap) {
                     outpt.write("stageMap\t" + map + "\r\n");
                 }
-                outpt.write("saveLoc\t" + (new File("Temp").getAbsolutePath()) + "\r\n");
+                outpt.write("saveLoc\t" + new File("Temp").getAbsolutePath() + "\r\n");
                 outpt.write("iter\t" + params.iterations + "\r\n");
                 outpt.write("alpha\t" + params.alpha + "\r\n");
                 for(String param : params.a) {
@@ -350,7 +351,7 @@ public class ScriptManager {
                 cmd[1] = "-c";
                 cmd[2] = command;
             } else if(System.getProperty("os.name").startsWith("Windows"))  {
-                String command = "R --vanilla <" + path + " > nul 2> nul --args " + path2;
+                String command = "R --vanilla <\"" + path + "\" > nul 2> nul --args \"" + path2 + "\"";
                 cmd[0] = "cmd";
                 cmd[1] = "/c";
                 cmd[2] = command;

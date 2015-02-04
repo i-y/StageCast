@@ -20,6 +20,8 @@
  */
 package stagecast;
 
+import data.DatabaseObject;
+import data.ImportationObject;
 import java.io.File;
 
 import data.SettingsObject;
@@ -66,6 +68,8 @@ public class StageCast extends Application {
      * directories that the program uses during the course of its operation, as 
      * well as loads any previously-saved settings. It will create any missing 
      * folder.
+     * @note If it detects there is no existing settings file, it will create 
+     * one and load a default dataset if the raw input files are present.
      * @note Any future runtime checks should be added to this method.
      */
     private boolean setup() {
@@ -118,7 +122,33 @@ public class StageCast extends Application {
                 Logger.getLogger(StageCast.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        settings = XmlManager.loadSettings();
+        
+        File settingsFile = new File("settings.xml");
+        if(!settingsFile.exists()) {
+            settings = XmlManager.loadSettings();
+            if ((new File("Raw/Organisms/billsOrg.txt").exists())&&(new File("Raw/Weather/billsWeather.txt").exists())) {
+                File defaultDataset = new File("Raw/Organisms/billsOrg.txt");
+                ImportationObject io = Importer.autoLoad(defaultDataset.getAbsolutePath(), true);
+                io.destination = (new File("SavedData/Organisms")).getAbsolutePath();
+                Importer.save(io);
+                DatabaseObject datasetInfo = XmlManager.readDatabaseFile(io.destination + "/" + io.datasetName + ".about.xml");
+                settings.organismCount++;
+                settings.organismLocations.add(datasetInfo.location);
+                settings.organismNames.add(datasetInfo.name);
+                settings.loadedOrganism = datasetInfo.location;
+                defaultDataset = new File("Raw/Weather/billsWeather.txt");
+                io = Importer.autoLoad(defaultDataset.getAbsolutePath(), false);
+                io.destination = (new File("SavedData/Weather")).getAbsolutePath();
+                Importer.save(io);
+                datasetInfo = XmlManager.readDatabaseFile(io.destination + "/" + io.datasetName + ".about.xml");
+                settings.weatherCount++;
+                settings.weatherLocations.add(datasetInfo.location);
+                settings.weatherNames.add(datasetInfo.name);
+                settings.loadedWeather = datasetInfo.location;
+            }
+        } else {
+            settings = XmlManager.loadSettings();
+        }
         if(settings != null) {
             File file = new File(settings.defaultModelLocation);
             if(!file.exists()) {

@@ -1,0 +1,19 @@
+<models>
+	<model>
+		<paramCount>4</paramCount>
+		<param>
+			<val>2584.18774128093</val>
+		</param>
+		<param>
+			<val>3163.93234131345</val>
+		</param>
+		<param>
+			<val>3517.77524524101</val>
+		</param>
+		<param>
+			<val>0.268208435542069</val>
+		</param>
+		<log>-14.6175547618656</log>
+		<aic>39.2351095237313</aic>
+	</model>
+</models>
