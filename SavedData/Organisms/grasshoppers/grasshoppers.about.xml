@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<about>
+    <name>grasshoppers</name>
+    <date>02/05/2015</date>
+    <time>14:47:02</time>
+    <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/grasshoppers/grasshoppers.about.xml</location>
+    <type>Organism</type>
+    <stages>7</stages>
+    <stageNames>
+        <nameVal>Stage 0</nameVal>
+        <nameVal>Stage 1</nameVal>
+        <nameVal>Stage 2</nameVal>
+        <nameVal>Stage 3</nameVal>
+        <nameVal>Stage 4</nameVal>
+        <nameVal>Stage 5</nameVal>
+        <nameVal>Stage 6</nameVal>
+    </stageNames>
+    <size>4</size>
+    <members>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/grasshoppers/grasshoppers.DEORU.txt</location>
+            <name>DEORU</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/grasshoppers/grasshoppers.PACKA.txt</location>
+            <name>PACKA</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/grasshoppers/grasshoppers.ANGUS.txt</location>
+            <name>ANGUS</name>
+        </member>
+        <member>
+            <location>C:\Users\ian.yocum\Documents\work\programming\netBeansprograms\StageCast\SavedData\Organisms/grasshoppers/grasshoppers.SANGU.txt</location>
+            <name>SANGU</name>
+        </member>
+    </members>
+</about>

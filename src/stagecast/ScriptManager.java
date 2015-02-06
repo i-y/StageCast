@@ -256,9 +256,9 @@ public class ScriptManager {
         try {
             try (BufferedWriter outpt = new BufferedWriter(new FileWriter("Temp/modelInput.txt"))) {
                 outpt.write("tag\tdata\r\n");
-                outpt.write("weather\t" + inpt.weatherDatabaseLocation.replace("\\", "/") + "\r\n");
+                outpt.write("weather\t" + inpt.weatherDatabaseLocation + "\r\n");
                 for (String organismFile : inpt.OrganismFiles) {
-                    outpt.write("species\t" + organismFile.replace("\\", "/") + "\r\n");
+                    outpt.write("species\t" + organismFile + "\r\n");
                 }
                 for (String map : inpt.stageMap) {
                     outpt.write("stageMap\t" + map + "\r\n");
@@ -285,7 +285,6 @@ public class ScriptManager {
                 cmd[0] = "cmd";
                 cmd[1] = "/c";
                 cmd[2] = command;
-                System.out.println(command);
             }
             Process p = new ProcessBuilder(cmd).redirectError(Redirect.INHERIT).redirectOutput(Redirect.INHERIT).start();
             p.waitFor();
@@ -325,7 +324,7 @@ public class ScriptManager {
                 outpt.write("tag\tdata\r\n");
                 outpt.write("weather\t" + weather.memberLocations[0] + "\r\n");
                 for (String OrganismFile : organism.memberLocations) {
-                    outpt.write("species\t" + OrganismFile.replace("\\", "/") + "\r\n");
+                    outpt.write("species\t" + OrganismFile + "\r\n");
                 }
                 for (String map : params.stageMap) {
                     outpt.write("stageMap\t" + map + "\r\n");

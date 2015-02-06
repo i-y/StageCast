@@ -1,19 +1,28 @@
 <models>
 	<model>
-		<paramCount>4</paramCount>
+		<paramCount>7</paramCount>
 		<param>
-			<val>2584.18774128093</val>
+			<val>4593.59474137344</val>
 		</param>
 		<param>
-			<val>3163.93234131345</val>
+			<val>4865.67155774806</val>
 		</param>
 		<param>
-			<val>3517.77524524101</val>
+			<val>5242.95125126923</val>
 		</param>
 		<param>
-			<val>0.268208435542069</val>
+			<val>5618.60476489425</val>
 		</param>
-		<log>-14.6175547618656</log>
-		<aic>39.2351095237313</aic>
+		<param>
+			<val>6008.9163174137</val>
+		</param>
+		<param>
+			<val>6584.24231181738</val>
+		</param>
+		<param>
+			<val>17.899512208626</val>
+		</param>
+		<log>-616.518027366723</log>
+		<aic>1249.03605473345</aic>
 	</model>
 </models>

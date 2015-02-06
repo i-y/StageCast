@@ -318,6 +318,9 @@ public class Importer {
      * assumes the data is valid and does not perform any significant validation.
      * @param io The InformationObject that describes the input file.
      * @return ImportationObject describing the data set.
+     * @bug This will fail if passed an objects with, for example, multiple
+     * spaces between columns instead of just one. This should probably be 
+     * fixed at the point this method is called.
      */
     public static ImportationObject load(ImportationObject io) {
         try {

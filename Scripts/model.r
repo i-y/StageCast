@@ -313,7 +313,8 @@ negloglike = function(params,T,dataset) {
 
 # The program takes one argument from the command line, the location of the config file to be used.
 args = commandArgs(trailingOnly = TRUE)
-settings = args[1]
+settings = "C:\\Users\\ian.yocum\\Documents\\work\\programming\\netBeansprograms\\StageCast\\Temp\\modelInput.txt"
+#settings = args[1]
 
 # Load the configuration file. This file contains all the input information needed for modeling.
 config = read.table(settings,header=TRUE,stringsAsFactors=FALSE,sep="\t")
