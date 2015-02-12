@@ -126,8 +126,8 @@ public class StageCast extends Application {
         File settingsFile = new File("settings.xml");
         if(!settingsFile.exists()) {
             settings = XmlManager.loadSettings();
-            if ((new File("Raw/Organisms/billsOrg.txt").exists())&&(new File("Raw/Weather/billsWeather.txt").exists())) {
-                File defaultDataset = new File("Raw/Organisms/billsOrg.txt");
+            if ((new File("Raw/Organisms/almondData.txt").exists())&&(new File("Raw/Weather/almondWeather.txt").exists())) {
+                File defaultDataset = new File("Raw/Organisms/almondData.txt");
                 ImportationObject io = Importer.autoLoad(defaultDataset.getAbsolutePath(), true);
                 io.destination = (new File("SavedData/Organisms")).getAbsolutePath();
                 Importer.save(io);
@@ -136,7 +136,7 @@ public class StageCast extends Application {
                 settings.organismLocations.add(datasetInfo.location);
                 settings.organismNames.add(datasetInfo.name);
                 settings.loadedOrganism = datasetInfo.location;
-                defaultDataset = new File("Raw/Weather/billsWeather.txt");
+                defaultDataset = new File("Raw/Weather/almondWeather.txt");
                 io = Importer.autoLoad(defaultDataset.getAbsolutePath(), false);
                 io.destination = (new File("SavedData/Weather")).getAbsolutePath();
                 Importer.save(io);
